@@ -14,21 +14,21 @@ _기말 제출을 위한 재현 가능한 AI 유기합성 분석 파이프라인
 
 ```mermaid
 flowchart TB
-    accTitle: Final Project Synthesis Pipeline
-    accDescr: Planned final-project workflow from choosing a target molecule through evidence-preserving route, condition, and yield predictions to a Solar Pro 4 generated final report.
+    accTitle: 기말 프로젝트 합성 예측 파이프라인
+    accDescr: 대상 물질 선정부터 경로, 조건, 수율 예측의 근거 보존과 Solar Pro 4 최종 보고서 생성까지의 기말 프로젝트 예정 흐름입니다.
 
-    target_input([📥 Enter molecule and SMILES]) --> preflight[⚙️ Validate environment and input]
-    preflight --> route_model[🧠 Run route model]
-    route_model --> route_check{🔍 Route available?}
-    route_check -->|Yes| condition_model[🧠 Predict reaction conditions]
-    route_check -->|No| route_failure[❌ Record route failure]
-    condition_model --> yield_model[🧠 Predict reaction yields]
-    yield_model --> evidence_store[(💾 Preserve inputs and outputs)]
+    target_input([📥 물질명과 SMILES 입력]) --> preflight[⚙️ 환경과 입력 검증]
+    preflight --> route_model[🧠 합성 경로 모델 실행]
+    route_model --> route_check{🔍 경로 생성 여부?}
+    route_check -->|생성됨| condition_model[🧠 반응 조건 예측]
+    route_check -->|생성 실패| route_failure[❌ 경로 실패 기록]
+    condition_model --> yield_model[🧠 반응 수율 예측]
+    yield_model --> evidence_store[(💾 입력과 출력 보존)]
     route_failure --> evidence_store
-    evidence_store --> report_model[🧠 Solar Pro 4 writes report]
-    report_model --> report_check{🔍 Evidence complete?}
-    report_check -->|Yes| final_report([✅ Export PDF or DOCX])
-    report_check -->|No| report_failure[⚠️ Record missing evidence]
+    evidence_store --> report_model[🧠 Solar Pro 4 보고서 작성]
+    report_model --> report_check{🔍 근거 자료 완전성?}
+    report_check -->|충분함| final_report([✅ PDF 또는 DOCX 출력])
+    report_check -->|누락됨| report_failure[⚠️ 누락 근거 기록]
 
     classDef process fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
     classDef decision fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,color:#713f12
