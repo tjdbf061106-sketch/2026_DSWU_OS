@@ -1,0 +1,2 @@
+opencode run -m upstage/solar-pro4 --format json
+Prompt: Generate a concise JSON retrosynthetic proposal for aspirin (SMILES CC(=O)Oc1ccccc1C(=O)O), including status, one chemically plausible route, steps, and limitations. Do not invent experimental yields or conditions.

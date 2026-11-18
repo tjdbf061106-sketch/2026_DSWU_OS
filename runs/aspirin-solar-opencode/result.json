@@ -1,0 +1,17 @@
+{
+  "target_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+  "status": "proposed",
+  "steps": [
+    {
+      "reactants": ["salicylic acid", "acetic anhydride"],
+      "product": "acetylsalicylic acid",
+      "transformation": "O-acetylation of phenolic -OH"
+    }
+  ],
+  "limitations": [
+    "No experimental yields or conditions provided.",
+    "Single-step route assumes availability of salicylic acid and acetic anhydride; upstream synthesis of salicylic acid (e.g., Kolbe-Schmitt carboxylation of phenol) is not included.",
+    "Acetylation selectivity: over-acetylation or side reactions are not addressed.",
+    "Workup and purification details are omitted."
+  ]
+}

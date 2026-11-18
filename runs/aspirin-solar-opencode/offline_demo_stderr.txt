@@ -1,0 +1,17 @@
+Command:
+py -m uv run python demo\run_demo.py --output runs\offline-verification-2026-11-18
+
+Output:
+Traceback (most recent call last):
+  File "C:\Users\DS\OS\github-skills\synthex\demo\run_demo.py", line 111, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\DS\OS\github-skills\synthex\demo\run_demo.py", line 81, in main
+    asyncio.run(
+  File "C:\Users\DS\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+  File "C:\Users\DS\OS\github-skills\synthex\src\synthex\pipeline.py", line 407, in run
+    strategies = store.read_checkpoint(manifest.artifacts["strategies"])["strategies"]
+  File "C:\Users\DS\OS\github-skills\synthex\src\synthex\artifacts.py", line 202, in read_checkpoint
+    raise ValueError(f"checkpoint digest mismatch: {reference.path}")
+ValueError: checkpoint digest mismatch: strategies.json
