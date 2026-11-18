@@ -1,0 +1,6 @@
+# Core environment for the final project scaffold.
+# Pin exact versions after choosing and validating the final model stack.
+pydantic>=2.7,<3
+pyyaml>=6,<7
+rdkit>=2023.9.1
+reportlab>=4,<5

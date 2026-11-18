@@ -1,0 +1,21 @@
+# Local configuration and secrets
+config/project.local.yaml
+.env
+.env.*
+!.env.example
+
+# Downloaded model assets and large outputs
+assets/models/
+assets/data/
+*.onnx
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+
+# Python and operating-system artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db

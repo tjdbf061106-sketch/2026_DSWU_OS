@@ -1,0 +1,34 @@
+project:
+  target_input: inputs/target.example.json
+  output_root: runs
+  report_output: report
+
+models:
+  route:
+    name: null
+    version: null
+    repository: null
+    command: null
+  conditions:
+    name: null
+    version: null
+    repository: null
+    command: null
+  yield:
+    name: null
+    version: null
+    repository: null
+    command: null
+  report:
+    provider: upstage
+    model: solar-pro4
+    command: null
+
+credentials:
+  route_api_key_env: null
+  report_api_key_env: null
+
+limits:
+  max_route_steps: null
+  max_model_calls: null
+  max_report_pages: 20
